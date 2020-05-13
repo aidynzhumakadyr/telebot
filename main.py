@@ -18,7 +18,7 @@ bot = telebot.TeleBot(bot_token)
 
 @bot.message_handler(commands=['start'])
 def welcome(message):
-    bot.send_message(message.chat.id,"Привет,{0.first_name}!\nЯ - <b>{1.first_name}</b>, бот созданный чтобы служить.  ". format(message.from_user,bot.get_me()), parse_mode='html')
+    bot.send_message(message.chat.id,"Привет,{0.first_name}!\nЯ - <b>{1.first_name}</b>, бот созданный чтобы служить.(created by @idon2003)  ". format(message.from_user,bot.get_me()), parse_mode='html')
 
     markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
     item1 = types.KeyboardButton("Имя второй половинки")
